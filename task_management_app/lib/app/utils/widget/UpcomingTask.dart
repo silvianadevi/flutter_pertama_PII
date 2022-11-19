@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:ionicons/ionicons.dart';
+
 
 import 'style/AppColors.dart';
+
 
 class UpcomingTask extends StatelessWidget {
   const UpcomingTask({
@@ -22,7 +25,7 @@ class UpcomingTask extends StatelessWidget {
                     'Upcoming Task', 
                       style: TextStyle(
                     color: AppColors.primaryText, 
-                    fontSize: 30,
+                    fontSize: 25,
                     ),
                     ),
                     const  SizedBox(
@@ -57,7 +60,7 @@ class UpcomingTask extends StatelessWidget {
                                 backgroundColor: Colors.amber, 
                                 radius: 20, 
                                   foregroundImage: NetworkImage(
-                                  'https://www.google.com/imgres?imgurl=https%3A%2F%2Fassets.website-files.com%2F62709318493cafbb465ed770%2F6290f7624ccbb28f48643d07_6093a6f9a5c6fd2f11e9612d_CS.png&imgrefurl=https%3A%2F%2Fwww.s-gala.com%2Fblog-post%2Fcustomer-service-yang-handal&tbnid=BAQFhgfOyhXNWM&vet=12ahUKEwim6rCC6Lb7AhVXi9gFHb9rBpMQMygHegUIARCwAQ..i&docid=Gr32eubHI0YoRM&w=500&h=418&q=foto%20profil%20customer%20service&ved=2ahUKEwim6rCC6Lb7AhVXi9gFHb9rBpMQMygHegUIARCwAQ'),
+                                  'https://ecs7.tokopedia.net/blog-tokopedia-com/uploads/2021/03/Freepik2.jpg'),
                           ),
                                               ),
                 ClipRRect(
@@ -66,7 +69,7 @@ class UpcomingTask extends StatelessWidget {
                 backgroundColor: Colors.amber, 
                  radius: 20, 
                    foregroundImage: NetworkImage(
-                  'https://www.google.com/imgres?imgurl=https%3A%2F%2Fassets.website-files.com%2F62709318493cafbb465ed770%2F6290f7624ccbb28f48643d07_6093a6f9a5c6fd2f11e9612d_CS.png&imgrefurl=https%3A%2F%2Fwww.s-gala.com%2Fblog-post%2Fcustomer-service-yang-handal&tbnid=BAQFhgfOyhXNWM&vet=12ahUKEwim6rCC6Lb7AhVXi9gFHb9rBpMQMygHegUIARCwAQ..i&docid=Gr32eubHI0YoRM&w=500&h=418&q=foto%20profil%20customer%20service&ved=2ahUKEwim6rCC6Lb7AhVXi9gFHb9rBpMQMygHegUIARCwAQ'),
+                  'https://ecs7.tokopedia.net/blog-tokopedia-com/uploads/2021/03/Freepik2.jpg'),
                ),
                                    ),
                                    const Spacer(),
@@ -130,7 +133,7 @@ class UpcomingTask extends StatelessWidget {
                                 backgroundColor: Colors.amber, 
                                 radius: 20, 
                                   foregroundImage: NetworkImage(
-                                  'https://www.google.com/imgres?imgurl=https%3A%2F%2Fassets.website-files.com%2F62709318493cafbb465ed770%2F6290f7624ccbb28f48643d07_6093a6f9a5c6fd2f11e9612d_CS.png&imgrefurl=https%3A%2F%2Fwww.s-gala.com%2Fblog-post%2Fcustomer-service-yang-handal&tbnid=BAQFhgfOyhXNWM&vet=12ahUKEwim6rCC6Lb7AhVXi9gFHb9rBpMQMygHegUIARCwAQ..i&docid=Gr32eubHI0YoRM&w=500&h=418&q=foto%20profil%20customer%20service&ved=2ahUKEwim6rCC6Lb7AhVXi9gFHb9rBpMQMygHegUIARCwAQ'),
+                                  'https://ecs7.tokopedia.net/blog-tokopedia-com/uploads/2021/03/Freepik2.jpg'),
                           ),
                                               ),
                 ClipRRect(
@@ -139,7 +142,7 @@ class UpcomingTask extends StatelessWidget {
                 backgroundColor: Colors.amber, 
                  radius: 20, 
                    foregroundImage: NetworkImage(
-                  'https://www.google.com/imgres?imgurl=https%3A%2F%2Fassets.website-files.com%2F62709318493cafbb465ed770%2F6290f7624ccbb28f48643d07_6093a6f9a5c6fd2f11e9612d_CS.png&imgrefurl=https%3A%2F%2Fwww.s-gala.com%2Fblog-post%2Fcustomer-service-yang-handal&tbnid=BAQFhgfOyhXNWM&vet=12ahUKEwim6rCC6Lb7AhVXi9gFHb9rBpMQMygHegUIARCwAQ..i&docid=Gr32eubHI0YoRM&w=500&h=418&q=foto%20profil%20customer%20service&ved=2ahUKEwim6rCC6Lb7AhVXi9gFHb9rBpMQMygHegUIARCwAQ'),
+                  'https://ecs7.tokopedia.net/blog-tokopedia-com/uploads/2021/03/Freepik2.jpg'),
                ),
                                    ),
                                    const Spacer(),
@@ -191,37 +194,7 @@ class UpcomingTask extends StatelessWidget {
                ),
              ),
            ),
-           Expanded(
-             child: Column(
-               children: [
-                 Row(
-                   children: [
-                     const Text(
-                      'My Friend', 
-                        style: TextStyle(
-                      color: AppColors.primaryText, 
-                      fontSize: 30,
-                      ),
-                      ),
-                      const Text(
-                      'More', 
-                        style: TextStyle(
-                      color: AppColors.primaryText, 
-                      fontSize: 30,
-                      ),
-                      ),
-                      Icon(
-                        Icons.arrow_forward,
-                        color: AppColors.primaryText,
-                      )
-                   ],
-                 ),
-                  const  SizedBox(
-                height: 20,
-                             ),
-               ],
-             ),
-           ),
+          
            
          ],
        ),

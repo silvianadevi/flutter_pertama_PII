@@ -3,9 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:ionicons/ionicons.dart';
 import 'package:task_management_app/app/utils/widget/header.dart';
+import 'package:task_management_app/app/utils/widget/myTask.dart';
+import 'package:task_management_app/app/utils/widget/profileW.dart';
 import 'package:task_management_app/app/utils/widget/sideBar.dart';
 import 'package:task_management_app/app/utils/widget/style/AppColors.dart';
 
+import '../../../routes/app_pages.dart';
 import '../controllers/profile_controller.dart';
 
 class ProfileView extends GetView<ProfileController> {
@@ -61,23 +64,38 @@ final GlobalKey<ScaffoldState> _drawerKey = GlobalKey();
         ],
         ),
          const Spacer(),
-         const Icon(
-            Ionicons.notifications, 
-            color: AppColors.primaryText,
-            size: 30,
-          ),
-          const SizedBox(
-            width: 15,
+  
+      GestureDetector  (
+          onTap: () {
+            Get.defaultDialog(title: 'Sign Out',
+            content: const Text('Are You Sure Want to Sign Out?'),
+            cancel: ElevatedButton(
+              onPressed:() => Get.back(),
+               child: const Text('Cancel'),
+               ),
+               confirm: ElevatedButton(
+              onPressed:() => Get.toNamed(Routes.LOGIN),
+               child: const Text('Sign Out'),
+               ),
+            );
+          },
+            child: Row(
+              children: const [
+                 Text('Sign Out', 
+                 style: TextStyle(
+                  color: AppColors.primaryText, 
+                  fontSize: 16),
+                 ),
+                 SizedBox(
+              width: 5,
             ),
-          ClipRRect(
-          borderRadius: BorderRadius.circular(30),
-          child: const CircleAvatar(
-            backgroundColor: Colors.amber, 
-            radius: 25, 
-            foregroundImage: NetworkImage(
-              'https://www.google.com/imgres?imgurl=https%3A%2F%2Fassets.website-files.com%2F62709318493cafbb465ed770%2F6290f7624ccbb28f48643d07_6093a6f9a5c6fd2f11e9612d_CS.png&imgrefurl=https%3A%2F%2Fwww.s-gala.com%2Fblog-post%2Fcustomer-service-yang-handal&tbnid=BAQFhgfOyhXNWM&vet=12ahUKEwim6rCC6Lb7AhVXi9gFHb9rBpMQMygHegUIARCwAQ..i&docid=Gr32eubHI0YoRM&w=500&h=418&q=foto%20profil%20customer%20service&ved=2ahUKEwim6rCC6Lb7AhVXi9gFHb9rBpMQMygHegUIARCwAQ'),
+             Icon(Ionicons.log_out_outline, 
+             color: AppColors.primaryText,
+             size: 30,
+             ),
+              ],
+            ),
           ),
-          )
         ],
            ),
           ),
@@ -85,16 +103,42 @@ final GlobalKey<ScaffoldState> _drawerKey = GlobalKey();
 
             Expanded(
               child: Container(
-              padding: const EdgeInsets.all(50),
-              margin: !context.isPhone
-               ? const EdgeInsets.all(10)
-               : const EdgeInsets.all(0),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: !context.isPhone
-                 ? BorderRadius.circular(50)
-                 : BorderRadius.circular(20),
+              padding: !context.isPhone
+                ? const EdgeInsets.all(50)
+                :  const EdgeInsets.all(20),
+                margin: !context.isPhone
+                 ? const EdgeInsets.all(10)
+                 : const EdgeInsets.all(0),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: !context.isPhone
+                   ? BorderRadius.circular(50)
+                   : BorderRadius.circular(30),
+                ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: const [
+              ProfileW(),
+                 Text(
+                        'My Task', 
+                        style: TextStyle(
+                          color: AppColors.primaryText, 
+                          fontSize: 25,
+                          ),
+                          ),
+                      SizedBox(
+                      height: 20,
+                    ),
+              SizedBox(
+                height: 200,
+                 child: MyTask(
+
               ),
+              ),
+            ]),
+
+
             ))
           ]),
             )
@@ -103,3 +147,4 @@ final GlobalKey<ScaffoldState> _drawerKey = GlobalKey();
     );
   }
 }
+
