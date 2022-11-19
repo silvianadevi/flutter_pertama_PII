@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:get/route_manager.dart';
 import 'package:ionicons/ionicons.dart';
 
@@ -40,7 +41,7 @@ class MyFriends extends StatelessWidget {
                ),
              ),
              Icon(
-               Ionicons.chevron_forward,
+               Icons.arrow_forward_ios_outlined,
                color: AppColors.primaryText,
              )
           ],
@@ -53,9 +54,8 @@ class MyFriends extends StatelessWidget {
        child: GridView.builder(
          shrinkWrap: true,
          itemCount: 8,
-         gridDelegate: 
-        const SliverGridDelegateWithFixedCrossAxisCount (
-           crossAxisCount: 3,
+         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount (
+           crossAxisCount: context.isPhone ? 2 : 3,
            crossAxisSpacing: 20,
            mainAxisSpacing: 20), 
            itemBuilder: (context, index) {

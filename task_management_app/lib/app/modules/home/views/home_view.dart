@@ -70,7 +70,7 @@ final GlobalKey<ScaffoldState> _drawerKey = GlobalKey();
           ),
            const Spacer(),
            const Icon(
-              Ionicons.notifications, 
+              Icons.notifications, 
               color: AppColors.primaryText,
               size: 30,
             ),
