@@ -62,7 +62,7 @@ class header extends StatelessWidget {
             width: 20,
           ),
           const Icon(
-            Ionicons.notifications, 
+            Icons.notifications, 
             color: AppColors.primaryText,
             size: 30,
           ),
@@ -90,7 +90,7 @@ class header extends StatelessWidget {
                  SizedBox(
               width: 5,
             ),
-             Icon(Ionicons.log_out_outline, 
+             Icon(Icons.logout_outlined, 
              color: AppColors.primaryText,
              size: 30,
              ),

@@ -31,7 +31,7 @@ class UpcomingTask extends StatelessWidget {
                     const  SizedBox(
                   height: 20,
                    ), 
-                      SizedBox(
+                      const SizedBox(
                                  height: 20,
                                ),
                                SizedBox(
@@ -111,8 +111,7 @@ class UpcomingTask extends StatelessWidget {
                     ),
                     ),
                                  
-                ] 
-                ),
+                ] ),
                    ),                 
                                  Container(
                              height: 200, 

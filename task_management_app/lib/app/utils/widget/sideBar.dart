@@ -87,7 +87,7 @@ class SideBar extends StatelessWidget {
                 child:  Icon(
                   Get.currentRoute == '/task'
                    ? Icons.add_box
-                   : Ionicons.cube_outline,
+                   : Icons.add_box_outlined,
                  color:AppColors.primaryText,
                   size: 30,
                   ),
