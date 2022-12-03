@@ -1,5 +1,4 @@
 //vidio 7-9
-import 'dart:html';
 
 import 'package:flutter/material.dart';
 
@@ -22,7 +21,7 @@ final GlobalKey<ScaffoldState> _drawerKey = GlobalKey();
   Widget build(BuildContext context) {
     return Scaffold(
       key: _drawerKey,
-      drawer: const SideBar (),
+      drawer: const SizedBox(width: 150, child: const SideBar ()),
       backgroundColor: AppColors.primaryBg,
       body:SafeArea(
         child: Row(
@@ -63,7 +62,7 @@ final GlobalKey<ScaffoldState> _drawerKey = GlobalKey();
               style: TextStyle(fontSize: 30, color: AppColors.primaryText),
               ),
             Text(
-              'Manage Task Made Easy With Friends',
+              'Manage task made easy',
                style: TextStyle(fontSize: 16, color: AppColors.primaryText),
               ),
           ],
