@@ -132,7 +132,7 @@ final GlobalKey<ScaffoldState> _drawerKey = GlobalKey();
                   !context.isPhone 
                   ? Expanded(
                   child: Row(
-                    children: const [
+                    children: [
                        UpcomingTask(),
                         MyFriends(),
                     ],
